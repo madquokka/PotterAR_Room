@@ -15,6 +15,7 @@ public class PlayMgr : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+       //btn.SetActive(true);
     }
 }
