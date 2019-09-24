@@ -6,15 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/01.Scenes/01.Main.unity
+    path: Assets/Main/01.Main.unity
     guid: 70cb7f3ef4eebe14c8278bf27a59d4c4
   - enabled: 0
-    path: Assets/01.Scenes/02.Tutorial.unity
+    path: Assets/Tutorial/02.Tutorial.unity
     guid: 5ff26f69824fef1418e6675ffb3555ab
   - enabled: 0
-    path: Assets/01.Scenes/03.Window.unity
+    path: Assets/ARWindow/03.Window.unity
     guid: 23be1bc90231b244bb116e83b2cfdaf4
   - enabled: 1
-    path: Assets/01.Scenes/04.ARRoom.unity
+    path: Assets/ARRoom/04.ARRoom.unity
     guid: 992517a5e92a41e46b6e65b4469f8e30
   m_configObjects: {}
