@@ -78,6 +78,18 @@ namespace GoogleARCore.Examples.Common
             _UpdateMeshIfNeeded();
         }
 
+        // ¹Ù´ÚÀÎ½Ä ¸ØÃã
+        public void VisualizePlanes(bool showPlanes)
+        {
+            foreach (GameObject plane in GameObject.FindGameObjectsWithTag("Plane"))
+            {
+                Renderer r =plane.GetComponent<Renderer>();
+                DetectedPlaneVisualizer t = plane.GetComponent<DetectedPlaneVisualizer>();
+                r.enabled = showPlanes;
+                t.enabled = showPlanes;
+            }
+        }
+
         /// <summary>
         /// Initializes the DetectedPlaneVisualizer with a DetectedPlane.
         /// </summary>
@@ -206,4 +218,5 @@ namespace GoogleARCore.Examples.Common
             return true;
         }
     }
+
 }

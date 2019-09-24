@@ -5,7 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class PlayMgr : MonoBehaviour
 {
-    public GameObject btn;
+    [SerializeField]
+    private GameObject btn;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +18,6 @@ public class PlayMgr : MonoBehaviour
     void Update()
     {
 
-       //btn.SetActive(true);
+     
     }
 }

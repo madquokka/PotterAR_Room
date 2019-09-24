@@ -42,27 +42,34 @@ public class TouchMgr : MonoBehaviour
                                    | TrackableHitFlags.FeaturePointWithSurfaceNormal;
 
             //ARCore 전용 레이캐스트 (터치x좌표, 터치y좌표, 검출대상레이어, 결과값)
-            if (Frame.Raycast(touch.position.x, touch.position.y, flag, out hit) && t < 1)
+            if (Frame.Raycast(touch.position.x, touch.position.y, flag, out hit) && !isFirstTouch)
+
             {
                 //3D 좌표를 기억하는 객체
                 Anchor anchor = hit.Trackable.CreateAnchor(hit.Pose);
                 GameObject obj = Instantiate(arroom, hit.Pose.position, Quaternion.identity, anchor.transform);
-                t++;
-                obj.transform.rotation = Quaternion.Euler(arCamera.transform.position.x,
-                                                          obj.transform.position.y,
-                                                          arCamera.transform.position.z);
-                //if (isFirstTouch == false)
-                //{
-                //    firstPos = anchor.transform.position;
-                //    isFirstTouch = true;
-                //}
-                //else
-                //{
-                //    secondPos = anchor.transform.position;
-                //    isFirstTouch = false;
-                //}
-                //float dist = Vector3.Distance(firstPos, secondPos) * 100.0f;
-                //measureText.text = dist.ToString("00.##");
+                isFirstTouch = true;
+
+                //obj.transform.rotation = Quaternion.Euler(arCamera.transform.position.x,
+                //                                          obj.transform.position.y,
+                //                                          arCamera.transform.position.z);
+                // Check Euler
+
+
+
+
+               // if (isFirstTouch == false)
+               // {
+               //     firstPos = anchor.transform.position;
+               //     isFirstTouch = true;
+               // }
+               // else
+               // {
+               //     secondPos = anchor.transform.position;
+               //     isFirstTouch = false;
+               // }
+               // float dist = Vector3.Distance(firstPos, secondPos) * 100.0f;
+               //// measureText.text = dist.ToString("00.##");
 
             }
         }
